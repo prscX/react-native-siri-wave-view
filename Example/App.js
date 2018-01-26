@@ -28,13 +28,13 @@ export default class App extends Component<{}> {
       startAnimation: true
     })
 
-    setTimeout(() => {
+    setInterval(() => {
       if (this.state.startAnimation) {
         this.setState({ startAnimation: false, stopAnimation: true });
       } else {
         this.setState({ startAnimation: true, stopAnimation: false });
       }
-    }, 5000)
+    }, 30000)
   }
 
   render() {

@@ -10,26 +10,6 @@ class RNSiriWaveView extends Component {
   }
 
   render() {
-    if (Platform.OS === "ios") {
-      return (
-        <SiriWaveView style={{ width: this.props.width, height: this.props.height }} props={{
-          width: this.props.width,
-          height: this.props.height,
-          numberOfWaves: this.props.numberOfWaves,
-          backgroundColor: this.props.backgroundColor,
-          waveColor: this.props.waveColor,
-          primaryWaveLineWidth: this.props.primaryWaveLineWidth,
-          secondaryWaveLineWidth: this.props.secondaryWaveLineWidth,
-          frequency: this.props.frequency,
-          idleAmplitude: this.props.idleAmplitude,
-          amplitude: this.props.amplitude,
-          density: this.props.density,
-          phaseShift: this.props.phaseShift
-        }}
-        startAnimation={this.props.startAnimation} stopAnimation={this.props.stopAnimation}
-        />
-      );
-    } else if (Platform.OS === "android") {
       return <SiriWaveView style={{ width: this.props.width, height: this.props.height }} 
         props={{
           width: this.props.width,
@@ -47,7 +27,6 @@ class RNSiriWaveView extends Component {
         }}
         startAnimation={this.props.startAnimation} stopAnimation={this.props.stopAnimation}
       />;
-    }
   }
 }
 
@@ -80,13 +59,16 @@ RNSiriWaveView.defaultProps = {
   numberOfWaves: 5,
   backgroundColor: '#FFFFFF',
   waveColor: "#000000",
-  primaryWaveLineWidth: 50,
+  primaryWaveLineWidth: Platform.OS === 'ios' ? 3 : 50,
   secondaryWaveLineWidth: 1,
   frequency: 1.5,
   idleAmplitude: 0.01,
   amplitude: 0.01,
   density: 5,
-  phaseShift: -0.15
+  phaseShift: -0.15,
+
+  startAnimation: false,
+  stopAnimation: false
 };
 
 const SiriWaveView = requireNativeComponent(
