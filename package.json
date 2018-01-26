@@ -1,0 +1,17 @@
+
+{
+  "name": "react-native-siri-wave-view",
+  "version": "0.0.1",
+  "description": "React Native Siri Wave View",
+  "main": "RNSiriWaveView.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Pranav Raj Singh Chauhan",
+  "license": "MIT",
+  "peerDependencies": {
+  }
+}
