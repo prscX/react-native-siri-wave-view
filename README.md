@@ -36,20 +36,20 @@ import RNSiriWaveView from 'react-native-siri-wave-view';
 
 | Prop              | Type       | Default | Note                                                                                                       |
 | ----------------- | ---------- | ------- | ---------------------------------------------------------------------------------------------------------- |
-| `width`           | `number`     |         | Width of Siri Wave View |
-| `height`       | `number`     |         | Height of Siri Wave View                                                         |
-| `numberOfWaves`     | `number` |         | Number of waves you want in the view                                       |
-| `backgroundColor` | `string` |         | Background Color of Siri Wave View           |  |
-| `waveColor`    | `string`     |         | Color of Siri Waves                                        |  |
-| `primaryWaveLineWidth`      | `string`     |         | Width of primary wave
-| `iOS: secondaryWaveLineWidth`      | `string`     |         | Width of secondary wave |
-| `frequency`      | `number`     |         | Frequency of Waves |
-| `idleAmplitude`      | `number`     |         | Idle Amplitude of Waves |
-| `amplitude`      | `number`     |         | Amplitude of Waves |
-| `iOS: density`      | `number`     |         | Density of Waves |
-| `iOS: phaseShift`      | `number`     |         | Width of secondary wave |
-| `startAnimation`      | `bool`     |         | To Start the wave animation |
-| `stopAnimation`      | `bool`     |         | To Stop the ongoing wave animation |
+| `width`           | `number`     |    200     | Width of Siri Wave View |
+| `height`       | `number`     |    100     | Height of Siri Wave View                                                         |
+| `numberOfWaves`     | `number` |   5      | Number of waves you want in the view                                       |
+| `backgroundColor` | `string` |    #FFFFFF     | Background Color of Siri Wave View           |  |
+| `waveColor`    | `string`     |   #000000      | Color of Siri Waves                                        |  |
+| `primaryWaveLineWidth`      | `string`     |   iOS: 3, Android: 50      | Width of primary wave
+| `iOS: secondaryWaveLineWidth`      | `string`     |   1      | Width of secondary wave |
+| `frequency`      | `number`     |    1.5     | Frequency of Waves |
+| `idleAmplitude`      | `number`     |    0.01     | Idle Amplitude of Waves |
+| `amplitude`      | `number`     |    0.01     | Amplitude of Waves |
+| `iOS: density`      | `number`     |     5    | Density of Waves |
+| `iOS: phaseShift`      | `number`     |   -0.15      | Width of secondary wave |
+| `startAnimation`      | `bool`     |    false     | To Start the wave animation |
+| `stopAnimation`      | `bool`     |   false      | To Stop the ongoing wave animation |
 
 
 ## Credit
