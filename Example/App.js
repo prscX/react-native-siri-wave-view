@@ -15,10 +15,32 @@ import {
 import RNSiriWaveView from 'react-native-siri-wave-view'
 
 export default class App extends Component<{}> {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      startAnimation: false
+    }
+  }
+
+  componentDidMount () {
+    this.setState({
+      startAnimation: true
+    })
+
+    setTimeout(() => {
+      if (this.state.startAnimation) {
+        this.setState({ startAnimation: false, stopAnimation: true });
+      } else {
+        this.setState({ startAnimation: true, stopAnimation: false });
+      }
+    }, 5000)
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <RNSiriWaveView width={400} height={200} />
+        <RNSiriWaveView width={400} height={200} startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation} />
       </View>
     );
   }

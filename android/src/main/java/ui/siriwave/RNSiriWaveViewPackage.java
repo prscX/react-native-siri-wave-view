@@ -1,6 +1,7 @@
 
-package com.reactlibrary;
+package ui.siriwave;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -23,6 +24,9 @@ public class RNSiriWaveViewPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-      return Collections.emptyList();
+        List<ViewManager> modules = new ArrayList<>();
+        modules.add(new RNSiriWaveView());
+
+        return modules;
     }
 }

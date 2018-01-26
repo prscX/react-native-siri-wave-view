@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SiriWaveView">
+        <attr name="waveFrequency" format="float" />
+        <attr name="waveIdleAmplitude" format="float" />
+        <attr name="wavePhaseShift" format="float" />
+        <attr name="waveInitialPhaseOffset" format="float" />
+        <attr name="waveHeight" format="dimension" />
+        <attr name="waveVerticalPosition" format="float" />
+        <attr name="waveColor" format="color" />
+        <attr name="waveAmount" format="integer" />
+    </declare-styleable>
+</resources>

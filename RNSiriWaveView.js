@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 import { requireNativeComponent } from "react-native";
 
 class RNSiriWaveView extends Component {
+  constructor(props) {
+    super(props)
+  }
 
   render() {
     if (Platform.OS === "ios") {
@@ -22,12 +25,28 @@ class RNSiriWaveView extends Component {
           amplitude: this.props.amplitude,
           density: this.props.density,
           phaseShift: this.props.phaseShift
-        }} />
+        }}
+        startAnimation={this.props.startAnimation} stopAnimation={this.props.stopAnimation}
+        />
       );
     } else if (Platform.OS === "android") {
-      return (
-        <SiriWaveView />
-      );
+      return <SiriWaveView style={{ width: this.props.width, height: this.props.height }} 
+        props={{
+          width: this.props.width,
+          height: this.props.height,
+          numberOfWaves: this.props.numberOfWaves,
+          backgroundColor: this.props.backgroundColor,
+          waveColor: this.props.waveColor,
+          primaryWaveLineWidth: this.props.primaryWaveLineWidth,
+          secondaryWaveLineWidth: this.props.secondaryWaveLineWidth,
+          frequency: this.props.frequency,
+          idleAmplitude: this.props.idleAmplitude,
+          amplitude: this.props.amplitude,
+          density: this.props.density,
+          phaseShift: this.props.phaseShift
+        }}
+        startAnimation={this.props.startAnimation} stopAnimation={this.props.stopAnimation}
+      />;
     }
   }
 }
@@ -48,7 +67,10 @@ RNSiriWaveView.propTypes = {
   idleAmplitude: PropTypes.number,
   amplitude: PropTypes.number,
   density: PropTypes.number,
-  phaseShift: PropTypes.number
+  phaseShift: PropTypes.number,
+
+  startAnimation: PropTypes.bool,
+  stopAnimation: PropTypes.bool
 };
 
 RNSiriWaveView.defaultProps = {
@@ -58,7 +80,7 @@ RNSiriWaveView.defaultProps = {
   numberOfWaves: 5,
   backgroundColor: '#FFFFFF',
   waveColor: "#000000",
-  primaryWaveLineWidth: 3,
+  primaryWaveLineWidth: 50,
   secondaryWaveLineWidth: 1,
   frequency: 1.5,
   idleAmplitude: 0.01,
