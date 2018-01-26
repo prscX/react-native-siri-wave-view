@@ -82,7 +82,6 @@ RNSiriWaveView is provided under the MIT License.
 
 - React Native Iconic: [react-native-iconic](https://github.com/prscX/react-native-iconic)
 ![Screenshots](https://camo.githubusercontent.com/b18993cbfe91de8abdc0019dc9a6cd44707eec21/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3338313133332f73637265656e73686f74732f313639363538302f766266706f70666c6174627574746f6e332e676966)
-![Screenshots](https://camo.githubusercontent.com/642bd91749dce58abfba00fe1cefdf2cf4213fd3/68747470733a2f2f7261772e6769746875622e636f6d2f62616c7973762f6d6174657269616c2d6d656e752f6d61737465722f6172742f64656d6f2e676966)
 
 - React Native Download Button: [react-native-download-button](https://github.com/prscX/react-native-download-button)
 
