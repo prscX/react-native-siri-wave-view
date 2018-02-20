@@ -1,7 +1,16 @@
 
-# React Native Siri Wave View
+<p align="center">
+  <img src="https://cdn.dribbble.com/users/341264/screenshots/2203511/wave.gif" />
+</p>
 
-<img src="https://cdn.dribbble.com/users/341264/screenshots/2203511/wave.gif" />
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-native-siri-wave-view"><img src="http://img.shields.io/npm/v/react-native-siri-wave-view.svg?style=flat" /></a>
+  <a href="https://github.com/prscX/react-native-siri-wave-view/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" /></a>
+  <a href="https://github.com/prscX/react-native-siri-wave-view#License"><img src="https://img.shields.io/npm/l/react-native-siri-wave-view.svg?style=flat" /></a>
+</p>
+
+
+# React Native Siri Wave View
 
 React Native Bridge for iOS: [stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView) & Android: [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView). It reproduces the waveform effect seen in Siri on iOS 7.
 
