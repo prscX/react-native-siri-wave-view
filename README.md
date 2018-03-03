@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://cdn.dribbble.com/users/341264/screenshots/2203511/wave.gif" />
+  <img src="https://cdn.dribbble.com/users/341264/screenshots/2203511/wave.gif" width="600" height="300" />
 </p>
 
 <p align="center">
