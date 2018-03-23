@@ -41,6 +41,12 @@ dependencies {
 
 ```
 
+> **Note:** If you encounter below issue please the solution [ISSUE - 2](https://github.com/prscX/react-native-siri-wave-view/issues/2)
+
+<img src="./assets/ISSUE.png" />
+
+**Solution**: Please replace `import com.alex.siriwaveview.RNSiriWaveViewPackage;` with `import ui.siriwave.RNSiriWaveViewPackage;`
+
 ## Usage
 
 ```javascript
