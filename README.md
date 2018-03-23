@@ -23,11 +23,24 @@ Before we dive into on how to use this library. We would like to thank all the c
 - `$ react-native link react-native-siri-wave-view`
 
 #### Android
-Please add siriwaveview module in your app by adding below snippet in your app settings.gradle
+- Please add siriwaveview module in your app by adding below snippet in your app settings.gradle
 
 ```javascript
 include ':siriwaveview'
 project(':siriwaveview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-siri-wave-view/android/SIRIWaveView/siriwaveview')
+```
+
+- Add below `:siriwaveview` in your app `build.gradle` depenencies:
+
+```
+dependencies {
+    compile project(':siriwaveview')
+    compile project(':react-native-siri-wave-view')
+    compile fileTree(dir: "libs", include: ["*.jar"])
+    compile "com.android.support:appcompat-v7:25.1.1"
+    compile "com.facebook.react:react-native:+"  // From node_modules
+}
+
 ```
 
 ## Usage
