@@ -37,8 +37,6 @@ dependencies {
     compile project(':siriwaveview')
     compile project(':react-native-siri-wave-view')
     compile fileTree(dir: "libs", include: ["*.jar"])
-    compile "com.android.support:appcompat-v7:25.1.1"
-    compile "com.facebook.react:react-native:+"  // From node_modules
 }
 
 ```
