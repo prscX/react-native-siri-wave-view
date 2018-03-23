@@ -41,11 +41,10 @@ dependencies {
 
 ```
 
-> **Note:** If you encounter below issue please the solution [ISSUE - 2](https://github.com/prscX/react-native-siri-wave-view/issues/2)
+> **Note:** If you encounter [ISSUE - 2](https://github.com/prscX/react-native-siri-wave-view/issues/2), Please replace `import com.alex.siriwaveview.RNSiriWaveViewPackage;` with `import ui.siriwave.RNSiriWaveViewPackage;`
 
 <img src="./assets/ISSUE.png" />
 
-**Solution**: Please replace `import com.alex.siriwaveview.RNSiriWaveViewPackage;` with `import ui.siriwave.RNSiriWaveViewPackage;`
 
 ## Usage
 
