@@ -21,6 +21,8 @@ public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
     public static final String REACT_CLASS = "RNSiriWaveView";
     private Activity activity;
 
+    private boolean animating = false;
+
     @Override
     public String getName() {
         return REACT_CLASS;
@@ -61,7 +63,10 @@ public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
         siriWaveView.frequency = Double.valueOf(frequency).floatValue();
         siriWaveView.IdleAmplitude = Double.valueOf(idleAmplitude).floatValue();
         siriWaveView.amplitude = Double.valueOf(amplitude).floatValue();
+
         siriWaveView.init(activity, null);
+
+        animating = true;
 
         siriWaveViewFrame.addView(siriWaveView);
     }
@@ -70,7 +75,8 @@ public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
     @ReactProp(name = "startAnimation")
     public void setStartAnimation(FrameLayout SiriWaveViewFrame, boolean startAnimation) {
         SiriWaveView siriWaveView = (SiriWaveView) SiriWaveViewFrame.getChildAt(0);
-        if (startAnimation) {
+        if (siriWaveView != null && animating == false && startAnimation) {
+            animating = true;
             siriWaveView.startAnimation();
         }
     }
@@ -78,7 +84,8 @@ public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
     @ReactProp(name = "stopAnimation")
     public void setStopAnimation(FrameLayout SiriWaveViewFrame, boolean stopAnimation) {
         SiriWaveView siriWaveView = (SiriWaveView) SiriWaveViewFrame.getChildAt(0);
-        if (stopAnimation) {
+        if (siriWaveView != null && animating == true && stopAnimation) {
+            animating = false;
             siriWaveView.stopAnimation();
         }
     }

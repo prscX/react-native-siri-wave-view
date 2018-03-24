@@ -56,17 +56,19 @@ RCT_CUSTOM_VIEW_PROPERTY(startAnimation, bool, UIView) {
     if ([json integerValue] == 1 && timer == NULL) {
         SCSiriWaveformView *siriWave = [[view subviews] objectAtIndex: 0];
         
-        // Timer
-        timer = [NSTimer scheduledTimerWithTimeInterval: 0.02
-                                         target:self
-                                       selector: @selector(targetMethod:)
-                                       userInfo: siriWave
-                                        repeats:YES];
+        if (siriWave != nil) {
+            // Timer
+            timer = [NSTimer scheduledTimerWithTimeInterval: 0.02
+               target:self
+               selector: @selector(targetMethod:)
+               userInfo: siriWave
+               repeats:YES];
+        }
     }
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(stopAnimation, bool, UIView) {
-    if ([json integerValue] == 1) {
+    if ([json integerValue] == 1 && timer != NULL) {
         [timer invalidate];
         timer = NULL;
     }
