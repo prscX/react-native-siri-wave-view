@@ -23,7 +23,7 @@ Before we dive into on how to use this library. We would like to thank all the c
 - `$ react-native link react-native-siri-wave-view`
 
 #### Android
-- Please add `react-native-siri-wave-view` & `siriwaveview` module in your app by adding below snippet in your app settings.gradle. If it is already exisit please ignore:
+- Please add `react-native-siri-wave-view` & `siriwaveview` module in your app by adding below snippet in your app settings.gradle. If it already exisit please ignore:
 
 ```javascript
 include ':react-native-siri-wave-view'
