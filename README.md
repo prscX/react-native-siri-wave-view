@@ -52,6 +52,12 @@ dependencies {
 
 <img src="./assets/ISSUE.png" />
 
+#### iOS
+
+- Please run below command in order to install `cocoapods` required by the library:
+
+`cd ./node_modules/react-native-siri-wave-view/ios/ && pod install`
+
 
 ## Usage
 
