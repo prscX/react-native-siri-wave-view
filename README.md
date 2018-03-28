@@ -20,7 +20,7 @@
 This library is a React Native bridge around native libraries providing **Siri Wave** implementation:
 
 - iOS: [stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView) - Siri Wave 7 Implementation
-- iOS: [prscX/PXSiriWave](https://github.com/prscX/PXSiriWave) - Siri Wave 9 Implementation
+- iOS: [prscX/PXSiriWave](https://github.com/prscX/PXSiriWave9) - Siri Wave 9 Implementation
 - Android: [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView) - Siri Wave 7 Implementation
 
 ## Getting started
