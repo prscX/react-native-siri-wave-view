@@ -112,7 +112,7 @@ import RNSiriWaveView from 'react-native-siri-wave-view';
 ## Credit
 - iOS: [stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView)
 - Android: [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView)
-- Siri Wave 9: [GreatPotter](https://github.com/GreatPotter)
+- Siri Wave 9 Implementation by: [GreatPotter](https://github.com/GreatPotter)
 
 ## Contribution
 Contributions are welcome and are greatly appreciated! Every little bit helps, and credit will always be given.
