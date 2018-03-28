@@ -17,9 +17,11 @@
 
 # React Native Siri Wave View
 
-React Native Bridge for iOS: [stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView) & Android: [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView). It reproduces the waveform effect seen in Siri on iOS 7.
+This library is a React Native bridge around native libraries providing **Siri Wave** implementation:
 
-Before we dive into on how to use this library. We would like to thank all the contributor of [stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView) & [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView) for providing such a awesome nice, cool library
+- iOS: [stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView) - Siri Wave 7 Implementation
+- iOS: [prscX/PXSiriWave](https://github.com/prscX/PXSiriWave) - Siri Wave 9 Implementation
+- Android: [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView) - Siri Wave 7 Implementation
 
 ## Getting started
 
