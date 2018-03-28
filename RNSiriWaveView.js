@@ -23,7 +23,10 @@ class RNSiriWaveView extends Component {
           idleAmplitude: this.props.idleAmplitude,
           amplitude: this.props.amplitude,
           density: this.props.density,
-          phaseShift: this.props.phaseShift
+          phaseShift: this.props.phaseShift,
+          intensity: this.props.intensity,
+          colors: this.props.colors,
+          type: this.props.type
         }}
         startAnimation={this.props.startAnimation} stopAnimation={this.props.stopAnimation}
       />;
@@ -48,6 +51,8 @@ RNSiriWaveView.propTypes = {
   density: PropTypes.number,
   phaseShift: PropTypes.number,
 
+  type: PropTypes.number,
+
   startAnimation: PropTypes.bool,
   stopAnimation: PropTypes.bool
 };
@@ -57,15 +62,19 @@ RNSiriWaveView.defaultProps = {
   height: 100,
 
   numberOfWaves: 5,
-  backgroundColor: '#FFFFFF',
+  backgroundColor: "#FFFFFF",
   waveColor: "#000000",
-  primaryWaveLineWidth: Platform.OS === 'ios' ? 3 : 50,
+  primaryWaveLineWidth: Platform.OS === "ios" ? 3 : 50,
   secondaryWaveLineWidth: 1,
   frequency: 1.5,
   idleAmplitude: 0.01,
   amplitude: 0.01,
   density: 5,
   phaseShift: -0.15,
+  intensity: 0.3,
+  colors: ["#2085fc", "#5efca9", "#fd4767"],
+
+  type: 0,
 
   startAnimation: false,
   stopAnimation: false

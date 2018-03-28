@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97BD6AF72C9BF069B0E271BD /* libPods-RNSiriWaveView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E0F6120D010B2C4CF632E3 /* libPods-RNSiriWaveView.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RNSiriWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNSiriWaveView.m */; };
+		CE25A674206BE1FD0092D3DC /* libPXSiriWave.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25A673206BE1FD0092D3DC /* libPXSiriWave.a */; };
 		CEE1E69F201A2AA200CE4599 /* libSCSiriWaveformView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE1E69E201A2A9B00CE4599 /* libSCSiriWaveformView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE25A672206BE1FD0092D3DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEE1E634201A0CF800CE4599 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC29D6A5D08A839D41DD7DD71F82AB02;
+			remoteInfo = PXSiriWave;
+		};
 		CEE1E639201A0CF800CE4599 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEE1E634201A0CF800CE4599 /* Pods.xcodeproj */;
@@ -55,7 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE25A674206BE1FD0092D3DC /* libPXSiriWave.a in Frameworks */,
 				CEE1E69F201A2AA200CE4599 /* libSCSiriWaveformView.a in Frameworks */,
+				97BD6AF72C9BF069B0E271BD /* libPods-RNSiriWaveView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE1E63A201A0CF800CE4599 /* libPods-RNSiriWaveView.a */,
+				CE25A673206BE1FD0092D3DC /* libPXSiriWave.a */,
 				CEE1E69E201A2A9B00CE4599 /* libSCSiriWaveformView.a */,
 			);
 			name = Products;
@@ -168,6 +180,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		CE25A673206BE1FD0092D3DC /* libPXSiriWave.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPXSiriWave.a;
+			remoteRef = CE25A672206BE1FD0092D3DC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		CEE1E63A201A0CF800CE4599 /* libPods-RNSiriWaveView.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;

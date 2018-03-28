@@ -6,6 +6,7 @@
 #endif
 
 #import "SCSiriWaveformView.h"
+#import "PXSiriWave.h"
 
 @interface RNSiriWaveView : RCTViewManager
 

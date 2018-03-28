@@ -27,7 +27,7 @@ export default class App extends Component<{}> {
 
   render() {
     return <View style={styles.container}>
-        <RNSiriWaveView width={400} height={200} startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation} />
+        <RNSiriWaveView type={0} width={800} height={750} startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation} />
 
         <TouchableOpacity style={[styles.button]} onPress={() => {
           this.setState({ startAnimation: true, stopAnimation: false });

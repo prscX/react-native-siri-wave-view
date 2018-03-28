@@ -36,20 +36,43 @@ RCT_CUSTOM_VIEW_PROPERTY(props, NSDictonary *, UIView)
     NSNumber *amplitude = [json objectForKey: @"amplitude"];
     NSNumber *density = [json objectForKey: @"density"];
     NSNumber *phaseShift = [json objectForKey: @"phaseShift"];
+
+    NSArray *colors = [json objectForKey:@"colors"];
+    NSMutableArray *mutableColors = [[NSMutableArray alloc] init];
+    for (NSString *color in colors) {
+        [mutableColors addObject:[RNSiriWaveView colorFromHexCode: color]];
+    }
+
+    NSNumber *intensity = [json objectForKey: @"intensity"];
+    NSNumber *type = [json objectForKey: @"type"];
     
-    SCSiriWaveformView *siriWave = [[SCSiriWaveformView alloc] initWithFrame: CGRectMake(0, 0, [width intValue], [height intValue])];
-    siriWave.numberOfWaves = [numberOfWaves floatValue];
-    siriWave.backgroundColor = [RNSiriWaveView colorFromHexCode: backgroundColor];
-    siriWave.waveColor = [RNSiriWaveView colorFromHexCode: waveColor];
-    siriWave.primaryWaveLineWidth = [primaryWaveLineWidth floatValue];
-    siriWave.secondaryWaveLineWidth = [secondaryWaveLineWidth floatValue];
-    siriWave.frequency = [frequency floatValue];
-    siriWave.idleAmplitude = [idleAmplitude floatValue];
-//    siriWave.amplitude = [amplitude floatValue];
-    siriWave.density = [density floatValue];
-    siriWave.phaseShift = [phaseShift floatValue];
-    
-    [view addSubview: siriWave];
+    if ([type intValue] == 0) {
+        SCSiriWaveformView *siriWave = [[SCSiriWaveformView alloc] initWithFrame: CGRectMake(0, 0, [width intValue], [height intValue])];
+        siriWave.numberOfWaves = [numberOfWaves floatValue];
+        siriWave.backgroundColor = [RNSiriWaveView colorFromHexCode: backgroundColor];
+        siriWave.waveColor = [RNSiriWaveView colorFromHexCode: waveColor];
+        siriWave.primaryWaveLineWidth = [primaryWaveLineWidth floatValue];
+        siriWave.secondaryWaveLineWidth = [secondaryWaveLineWidth floatValue];
+        siriWave.frequency = [frequency floatValue];
+        siriWave.idleAmplitude = [idleAmplitude floatValue];
+        //    siriWave.amplitude = [amplitude floatValue];
+        siriWave.density = [density floatValue];
+        siriWave.phaseShift = [phaseShift floatValue];
+        
+        [view addSubview: siriWave];
+    } else if ([type intValue] == 1) {
+        
+        PXSiriWave *siriWave = [[PXSiriWave alloc] initWithFrame: CGRectMake(0, 0, [width intValue], [height intValue])];
+        siriWave.backgroundColor = [RNSiriWaveView colorFromHexCode: backgroundColor];
+        siriWave.frequency = [frequency floatValue];
+        siriWave.amplitude = [amplitude floatValue];
+        siriWave.intensity = [intensity floatValue];
+        siriWave.colors = mutableColors;
+        
+        [siriWave configure];
+        
+        [view addSubview: siriWave];
+    }
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(startAnimation, bool, UIView) {
