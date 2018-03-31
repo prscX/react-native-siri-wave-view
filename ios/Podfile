@@ -8,6 +8,6 @@ target 'RNSiriWaveView' do
   # Pods for RNSiriWaveView
 
   pod 'SCSiriWaveformView'
-  pod 'PXSiriWave',:git => 'https://github.com/prscX/PXSiriWave9.git', :commit =>'bd109dd'
+  pod 'PXSiriWave', '~> 0.0'
 
 end
