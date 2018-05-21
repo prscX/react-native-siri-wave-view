@@ -8,11 +8,8 @@ import com.facebook.react.bridge.Callback;
 
 public class RNSiriWaveViewModule extends ReactContextBaseJavaModule {
 
-  private final ReactApplicationContext reactContext;
-
   public RNSiriWaveViewModule(ReactApplicationContext reactContext) {
     super(reactContext);
-    this.reactContext = reactContext;
   }
 
   @Override

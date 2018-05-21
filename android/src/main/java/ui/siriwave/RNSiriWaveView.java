@@ -19,7 +19,7 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
 
     public static final String REACT_CLASS = "RNSiriWaveView";
-    private Activity activity;
+    private ThemedReactContext context;
 
     private boolean animating = false;
 
@@ -31,9 +31,9 @@ public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
 
     @Override
     protected FrameLayout createViewInstance(final ThemedReactContext reactContext) {
-        activity = reactContext.getCurrentActivity();
+        context = reactContext;
 
-        return new FrameLayout(reactContext.getCurrentActivity());
+        return new FrameLayout(context.getCurrentActivity());
     }
 
     @ReactProp(name = "props")
@@ -55,7 +55,7 @@ public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
         double phaseShift = props.getDouble("phaseShift");
 
 
-        SiriWaveView siriWaveView = new SiriWaveView(activity);
+        SiriWaveView siriWaveView = new SiriWaveView(context);
 
         siriWaveView.waveNumber = numberOfWaves;
         siriWaveView.waveColor = Color.parseColor(waveColor);
@@ -64,7 +64,7 @@ public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
         siriWaveView.IdleAmplitude = Double.valueOf(idleAmplitude).floatValue();
         siriWaveView.amplitude = Double.valueOf(amplitude).floatValue();
 
-        siriWaveView.init(activity, null);
+        siriWaveView.init(context, null);
 
         animating = true;
 

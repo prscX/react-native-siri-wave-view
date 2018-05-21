@@ -51,9 +51,31 @@ dependencies {
 
 ```
 
-- Please make sure your app `gradle` version is `2.3.3` > and above
+- Please add below snippet in your app build.gradle file
 
-- Please make sure your Android SDK > 25 and above
+```
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        ...
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        jcenter()
+        google()
+        ...
+    }
+}
+```
+
+
+- Please make sure your app `gradle` version is `3.0.1` > and above
+
+- Please make sure your Android SDK > 27 and above
 
 > **Note:** If you encounter [ISSUE - 2](https://github.com/prscX/react-native-siri-wave-view/issues/2), Please replace `import com.alex.siriwaveview.RNSiriWaveViewPackage;` with `import ui.siriwave.RNSiriWaveViewPackage;` in your app Android `MainApplication.java` class 
 

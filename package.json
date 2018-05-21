@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-siri-wave-view",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React Native Siri Wave View",
   "main": "RNSiriWaveView.js",
   "scripts": {
@@ -13,9 +13,9 @@
   },
   "keywords": ["react-native"],
   "author": "Pranav Raj Singh Chauhan",
-  "license": "MIT",
+  "license": "Apache 2.0 License",
   "peerDependencies": {},
   "devDependencies": {
-    "prettier-pack": "0.0.4"
+    "prettier-pack": "0.0.6"
   }
 }
