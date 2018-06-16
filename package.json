@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-siri-wave-view",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React Native Siri Wave View",
   "main": "RNSiriWaveView.js",
   "scripts": {
