@@ -1,4 +1,7 @@
 
+
+<h1 align="center">
+
 <p align="center">
   <img src="https://cdn.dribbble.com/users/341264/screenshots/2203511/wave.gif" width="600" height="300" />
 </p>
@@ -14,14 +17,11 @@
   <a href="https://github.com/prscX/react-native-siri-wave-view#License"><img src="https://img.shields.io/npm/l/react-native-siri-wave-view.svg?style=flat" /></a>
 </p>
 
+    React Native: Native Siri Wave View
+</h1>
 
-# React Native Siri Wave View
 
-This library is a React Native bridge around native libraries providing **Siri Wave** implementation:
-
-- iOS: [stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView) - Siri Wave 7 Implementation
-- iOS: [prscX/PXSiriWave9](https://github.com/prscX/PXSiriWave9) - Siri Wave 9 Implementation
-- Android: [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView) - Siri Wave 7 Implementation
+This library is a React Native bridge around native libraries providing **Siri Wave** implementation
 
 ## Getting started
 
@@ -57,7 +57,7 @@ dependencies {
 buildscript {
     repositories {
         jcenter()
-        google()
+        maven { url "https://maven.google.com" }
         ...
     }
 }
@@ -66,14 +66,11 @@ allprojects {
     repositories {
         mavenLocal()
         jcenter()
-        google()
+        maven { url "https://maven.google.com" }
         ...
     }
 }
 ```
-
-
-- Please make sure your app `gradle` version is `3.0.1` > and above
 
 - Please make sure your Android SDK > 27 and above
 
@@ -101,6 +98,8 @@ import RNSiriWaveView from 'react-native-siri-wave-view';
 ## Props
 
 
+- **Generic Props**
+
 | Prop              | Type       | Default | Note                                                                                                       |
 | ----------------- | ---------- | ------- | ---------------------------------------------------------------------------------------------------------- |
 | `width`           | `number`     |    200     | Width of Siri Wave View |
@@ -110,23 +109,26 @@ import RNSiriWaveView from 'react-native-siri-wave-view';
 | `backgroundColor` | `string` |    #FFFFFF     | Background Color of Siri Wave View           |  |
 | `waveColor`    | `string`     |   #000000      | Color of Siri Waves                                        |  |
 | `primaryWaveLineWidth`      | `string`     |   iOS: 3, Android: 50      | Width of primary wave
-| `iOS: secondaryWaveLineWidth`      | `string`     |   1      | Width of secondary wave |
+| `amplitude`      | `number`     |    0.5     | Amplitude of Waves |
 | `frequency`      | `number`     |    1.5     | Frequency of Waves |
-| `idleAmplitude`      | `number`     |    0.01     | Idle Amplitude of Waves |
 | `amplitude`      | `number`     |    0.01     | Amplitude of Waves |
 | `startAnimation`      | `bool`     |    false     | To Start the wave animation |
 | `stopAnimation`      | `bool`     |   false      | To Stop the ongoing wave animation |
-| `iOS: density`      | `number`     |     5    | Density of Waves |
-| `iOS: phaseShift`      | `number`     |   -0.15      | Width of secondary wave |
+
+
+- **iOS Props**
+
+| Prop              | Type       | Default | Note                                                                                                       |
+| ----------------- | ---------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| `secondaryWaveLineWidth`      | `string`     |   1      | Width of secondary wave |
+| `density`      | `number`     |     5    | Density of Waves |
+| `phaseShift`      | `number`     |   -0.15      | Width of secondary wave |
 
 
 - **Siri Wave 9 Props**
 
-
 | Prop              | Type       | Default | Note                                                                                                       |
 | ----------------- | ---------- | ------- | ---------------------------------------------------------------------------------------------------------- |
-| `amplitude`      | `number`     |    0.01     | Amplitude of Waves |
-| `frequency`      | `number`     |    1.5     | Frequency of Waves |
 | `intensity`      | `number`     |    0.3     | Specify intensity of wave |
 | `colors`      | `array`     |    ["#2085fc", "#5efca9", "#fd4767"]     | Specify colors of siri wave 9 colors |
 
@@ -136,11 +138,13 @@ import RNSiriWaveView from 'react-native-siri-wave-view';
 - Android: [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView)
 - Siri Wave 9 Implementation by: [GreatPotter](https://github.com/GreatPotter)
 
+
 ## Contribution
 Contributions are welcome and are greatly appreciated! Every little bit helps, and credit will always be given.
 
+
 ## License
-Copyright @2017 Pranav Raj Singh Chauhan
+Copyright @ Pranav Raj Singh Chauhan
 
 RNSiriWaveView is provided under the Apache 2 License.
 
