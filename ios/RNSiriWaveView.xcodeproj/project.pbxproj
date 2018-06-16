@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97BD6AF72C9BF069B0E271BD /* libPods-RNSiriWaveView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E0F6120D010B2C4CF632E3 /* libPods-RNSiriWaveView.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RNSiriWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNSiriWaveView.m */; };
 		CE25A674206BE1FD0092D3DC /* libPXSiriWave.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25A673206BE1FD0092D3DC /* libPXSiriWave.a */; };
+		CEB8D8FC20D4CC3E005B0CB1 /* RNSiriWaveView9.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8D8FB20D4CC3E005B0CB1 /* RNSiriWaveView9.m */; };
 		CEE1E69F201A2AA200CE4599 /* libSCSiriWaveformView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE1E69E201A2A9B00CE4599 /* libSCSiriWaveformView.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +56,8 @@
 		B3E7B5881CC2AC0600A0062D /* RNSiriWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSiriWaveView.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNSiriWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSiriWaveView.m; sourceTree = "<group>"; };
 		CA8D85C4077A8E40588A54D7 /* Pods-RNSiriWaveView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNSiriWaveView.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNSiriWaveView/Pods-RNSiriWaveView.release.xcconfig"; sourceTree = "<group>"; };
+		CEB8D8FA20D4CC3E005B0CB1 /* RNSiriWaveView9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSiriWaveView9.h; sourceTree = "<group>"; };
+		CEB8D8FB20D4CC3E005B0CB1 /* RNSiriWaveView9.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSiriWaveView9.m; sourceTree = "<group>"; };
 		CEE1E634201A0CF800CE4599 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +68,6 @@
 			files = (
 				CE25A674206BE1FD0092D3DC /* libPXSiriWave.a in Frameworks */,
 				CEE1E69F201A2AA200CE4599 /* libSCSiriWaveformView.a in Frameworks */,
-				97BD6AF72C9BF069B0E271BD /* libPods-RNSiriWaveView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +94,8 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				CEB8D8FA20D4CC3E005B0CB1 /* RNSiriWaveView9.h */,
+				CEB8D8FB20D4CC3E005B0CB1 /* RNSiriWaveView9.m */,
 				B3E7B5881CC2AC0600A0062D /* RNSiriWaveView.h */,
 				B3E7B5891CC2AC0600A0062D /* RNSiriWaveView.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -131,7 +134,6 @@
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
-				5406A5C96D65CE02E8557C75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,21 +206,6 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5406A5C96D65CE02E8557C75 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNSiriWaveView/Pods-RNSiriWaveView-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E4324A6271C77805B01607C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB8D8FC20D4CC3E005B0CB1 /* RNSiriWaveView9.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNSiriWaveView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

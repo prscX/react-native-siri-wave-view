@@ -1,9 +1,9 @@
 
-#import "RNSiriWaveView.h"
+#import "RNSiriWaveView9.h"
 
-@implementation RNSiriWaveView
+@implementation RNSiriWaveView9
 
-NSTimer *waveTimer;
+NSTimer *waveTimer9;
 
 - (dispatch_queue_t)methodQueue
 {
@@ -13,81 +13,62 @@ NSTimer *waveTimer;
 RCT_EXPORT_MODULE()
 
 - (UIView *)view {
-    SCSiriWaveformView *siriWave = [[SCSiriWaveformView alloc] init];
+    PXSiriWave *siriWave = [[PXSiriWave alloc] init];
     return siriWave;
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(size, NSDictonary *, SCSiriWaveformView) {
+RCT_CUSTOM_VIEW_PROPERTY(size, NSDictonary *, PXSiriWave) {
     NSNumber *width = [json objectForKey: @"width"];
     NSNumber *height = [json objectForKey: @"height"];
-
+    
     view.frame = CGRectMake(0, 0, [width intValue], [height intValue]);
+    [view configure];
     [view setNeedsDisplay];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(numberOfWaves, NSNumber *, SCSiriWaveformView) {
-    view.numberOfWaves = [json floatValue];
+RCT_CUSTOM_VIEW_PROPERTY(colors, NSArray *, PXSiriWave) {
+    NSMutableArray *mutableColors = [[NSMutableArray alloc] init];
+    for (NSString *color in json) {
+        [mutableColors addObject:[RNSiriWaveView9 colorFromHexCode: color]];
+    }
+
+    view.colors = mutableColors;
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(backgroundColor, NSString *, SCSiriWaveformView) {
-    view.backgroundColor = [RNSiriWaveView colorFromHexCode: json];
-}
 
-RCT_CUSTOM_VIEW_PROPERTY(waveColor, NSString *, SCSiriWaveformView) {
-    view.waveColor = [RNSiriWaveView colorFromHexCode: json];
-}
-
-RCT_CUSTOM_VIEW_PROPERTY(primaryWaveLineWidth, NSNumber *, SCSiriWaveformView) {
-    view.primaryWaveLineWidth = [json floatValue];
-}
-
-RCT_CUSTOM_VIEW_PROPERTY(secondaryWaveLineWidth, NSNumber *, SCSiriWaveformView) {
-    view.secondaryWaveLineWidth = [json floatValue];
-}
-
-RCT_CUSTOM_VIEW_PROPERTY(frequency, NSNumber *, SCSiriWaveformView) {
+RCT_CUSTOM_VIEW_PROPERTY(frequency, NSNumber *, PXSiriWave) {
     view.frequency = [json floatValue];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(amplitude, NSNumber *, SCSiriWaveformView) {
-    view.idleAmplitude = [json floatValue];
+RCT_CUSTOM_VIEW_PROPERTY(amplitude, NSNumber *, PXSiriWave) {
+    view.amplitude = [json floatValue];
 }
 
-
-RCT_CUSTOM_VIEW_PROPERTY(density, NSNumber *, SCSiriWaveformView) {
-    view.density = [json floatValue];
-}
-
-RCT_CUSTOM_VIEW_PROPERTY(phaseShift, NSNumber *, SCSiriWaveformView) {
-    view.phaseShift = [json floatValue];
-}
-
-
-RCT_CUSTOM_VIEW_PROPERTY(startAnimation, bool, SCSiriWaveformView) {
-    if ([json integerValue] == 1 && waveTimer == NULL) {
-        SCSiriWaveformView *siriWave = view;
+RCT_CUSTOM_VIEW_PROPERTY(startAnimation, bool, PXSiriWave) {
+    if ([json integerValue] == 1 && waveTimer9 == NULL) {
+        PXSiriWave *siriWave = view;
         
         if (siriWave != nil) {
             // Timer
-            waveTimer = [NSTimer scheduledTimerWithTimeInterval: 0.02
-               target:self
-               selector: @selector(targetMethod:)
-               userInfo: siriWave
-               repeats:YES];
+            waveTimer9 = [NSTimer scheduledTimerWithTimeInterval: 0.02
+                                                     target:self
+                                                   selector: @selector(targetMethod:)
+                                                   userInfo: siriWave
+                                                    repeats:YES];
         }
     }
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(stopAnimation, bool, SCSiriWaveformView) {
-    if ([json integerValue] == 1 && waveTimer != NULL) {
-        [waveTimer invalidate];
-        waveTimer = NULL;
+RCT_CUSTOM_VIEW_PROPERTY(stopAnimation, bool, PXSiriWave) {
+    if ([json integerValue] == 1 && waveTimer9 != NULL) {
+        [waveTimer9 invalidate];
+        waveTimer9 = NULL;
     }
 }
 
--(void)targetMethod:(NSTimer *)timer  {
-    SCSiriWaveformView *siriWave = [timer userInfo];
-
+-(void)targetMethod:(NSTimer *)timer9  {
+    PXSiriWave *siriWave = [timer9 userInfo];
+    
     [siriWave updateWithLevel: [self _normalizedPowerLevelFromDecibels: .1]];
 }
 
@@ -125,4 +106,4 @@ RCT_CUSTOM_VIEW_PROPERTY(stopAnimation, bool, SCSiriWaveformView) {
 
 
 @end
-  
+

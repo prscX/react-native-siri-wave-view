@@ -5,9 +5,9 @@
 #import <React/RCTViewManager.h>
 #endif
 
-#import "SCSiriWaveformView.h"
+#import "PXSiriWave.h"
 
-@interface RNSiriWaveView : RCTViewManager
+@interface RNSiriWaveView9 : RCTViewManager
 
 @end
-  
+

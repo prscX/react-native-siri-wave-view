@@ -30,16 +30,19 @@ export default class App extends Component<{}> {
         <RNSiriWaveView type={0} width={800} height={750} startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation} />
 
         <TouchableOpacity style={[styles.button]} onPress={() => {
-          this.setState({ startAnimation: true, stopAnimation: false });
-        }}>
+            this.setState({
+              startAnimation: true,
+              stopAnimation: false
+            });
+          }}>
           <Text>Start</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button]} onPress={() => {
-          this.setState({
-            startAnimation: false,
-            stopAnimation: true
-          });
-        }}>
+            this.setState({
+              startAnimation: false,
+              stopAnimation: true
+            });
+          }}>
           <Text>Stop</Text>
         </TouchableOpacity>
       </View>;

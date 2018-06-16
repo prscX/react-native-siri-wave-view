@@ -19,8 +19,8 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
 
     public static final String REACT_CLASS = "RNSiriWaveView";
-    private ThemedReactContext context;
 
+    private ThemedReactContext context;
     private boolean animating = false;
 
     @Override
@@ -33,50 +33,78 @@ public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
     protected FrameLayout createViewInstance(final ThemedReactContext reactContext) {
         context = reactContext;
 
-        return new FrameLayout(context.getCurrentActivity());
-    }
-
-    @ReactProp(name = "props")
-    public void setProps(FrameLayout siriWaveViewFrame, ReadableMap props) {
-        int width = props.getInt("width");
-        int height = props.getInt("height");
-
-        int numberOfWaves = props.getInt("numberOfWaves");
-        String backgroundColor = props.getString("backgroundColor");
-        String waveColor = props.getString("waveColor");
-
-        int primaryWaveLineWidth = props.getInt("primaryWaveLineWidth");
-        int secondaryWaveLineWidth = props.getInt("secondaryWaveLineWidth");
-
-        double frequency = props.getDouble("frequency");
-        double idleAmplitude = props.getDouble("idleAmplitude");
-        double amplitude = props.getDouble("amplitude");
-        double density = props.getDouble("density");
-        double phaseShift = props.getDouble("phaseShift");
-
-
-        SiriWaveView siriWaveView = new SiriWaveView(context);
-
-        siriWaveView.waveNumber = numberOfWaves;
-        siriWaveView.waveColor = Color.parseColor(waveColor);
-        siriWaveView.waveHeight = primaryWaveLineWidth;
-        siriWaveView.frequency = Double.valueOf(frequency).floatValue();
-        siriWaveView.IdleAmplitude = Double.valueOf(idleAmplitude).floatValue();
-        siriWaveView.amplitude = Double.valueOf(amplitude).floatValue();
-
+        SiriWaveView siriWaveView = new SiriWaveView(reactContext);
         siriWaveView.init(context, null);
 
-        animating = true;
+        FrameLayout frameLayout = new FrameLayout(reactContext.getCurrentActivity());
+        frameLayout.addView(siriWaveView);
 
-        siriWaveViewFrame.addView(siriWaveView);
+        return frameLayout;
     }
 
+    @ReactProp(name = "size")
+    public void setSize(FrameLayout frame, ReadableMap size) {
+        int width = size.getInt("width");
+        int height = size.getInt("height");
+    }
+
+    @ReactProp(name = "numberOfWaves")
+    public void setNumberOfWaves(FrameLayout frame, int numberOfWaves) {
+        SiriWaveView siriWaveView = (SiriWaveView) frame.getChildAt(0);
+        siriWaveView.waveNumber = numberOfWaves;
+
+        siriWaveView.init(context, null);
+    }
+
+    @ReactProp(name = "backgroundColor")
+    public void setBackgroundColor(FrameLayout frame, String backgroundColor) {
+        SiriWaveView siriWaveView = (SiriWaveView) frame.getChildAt(0);
+    }
+
+    @ReactProp(name = "waveColor")
+    public void setWaveColor(FrameLayout frame, String waveColor) {
+        SiriWaveView siriWaveView = (SiriWaveView) frame.getChildAt(0);
+        siriWaveView.waveColor = Color.parseColor(waveColor);
+
+        siriWaveView.init(context, null);
+    }
+
+    @ReactProp(name = "primaryWaveLineWidth")
+    public void setPrimaryWaveLineWidth(FrameLayout frame, int primaryWaveLineWidth) {
+        SiriWaveView siriWaveView = (SiriWaveView) frame.getChildAt(0);
+        siriWaveView.waveHeight = primaryWaveLineWidth;
+
+        siriWaveView.init(context, null);
+    }
+
+    @ReactProp(name = "secondaryWaveLineWidth")
+    public void setSecondaryWaveLineWidth(FrameLayout frame, int secondaryWaveLineWidth) {
+
+    }
+
+    @ReactProp(name = "frequency")
+    public void setFrequency(FrameLayout frame, int frequency) {
+        SiriWaveView siriWaveView = (SiriWaveView) frame.getChildAt(0);
+        siriWaveView.frequency = frequency;
+
+        siriWaveView.init(context, null);
+    }
+
+    @ReactProp(name = "amplitude")
+    public void setAmplitude(FrameLayout frame, int amplitude) {
+        SiriWaveView siriWaveView = (SiriWaveView) frame.getChildAt(0);
+        siriWaveView.amplitude = amplitude;
+
+        siriWaveView.init(context, null);
+    }
 
     @ReactProp(name = "startAnimation")
     public void setStartAnimation(FrameLayout SiriWaveViewFrame, boolean startAnimation) {
         SiriWaveView siriWaveView = (SiriWaveView) SiriWaveViewFrame.getChildAt(0);
         if (siriWaveView != null && animating == false && startAnimation) {
             animating = true;
+
+            siriWaveView.init(context, null);
             siriWaveView.startAnimation();
         }
     }

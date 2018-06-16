@@ -75,9 +75,9 @@ public class SiriWaveView extends View {
             mAmplitudeAnimator = ObjectAnimator.ofFloat(this, "amplitude", 1f);
             mAmplitudeAnimator.setRepeatCount(ObjectAnimator.INFINITE);
         }
-        if (!mAmplitudeAnimator.isRunning()) {
-            mAmplitudeAnimator.start();
-        }
+//        if (!mAmplitudeAnimator.isRunning()) {
+//            mAmplitudeAnimator.start();
+//        }
     }
 
     @Override
