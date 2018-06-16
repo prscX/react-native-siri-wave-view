@@ -14,6 +14,8 @@ RCT_EXPORT_MODULE()
 
 - (UIView *)view {
     SCSiriWaveformView *siriWave = [[SCSiriWaveformView alloc] init];
+    waveTimer = NULL;
+
     return siriWave;
 }
 

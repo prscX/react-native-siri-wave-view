@@ -39,6 +39,8 @@ public class RNSiriWaveView extends ViewGroupManager<ViewGroup> {
         FrameLayout frameLayout = new FrameLayout(reactContext.getCurrentActivity());
         frameLayout.addView(siriWaveView);
 
+        animating = false;
+
         return frameLayout;
     }
 

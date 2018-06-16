@@ -20,14 +20,14 @@ export default class App extends Component<{}> {
     super(props)
 
     this.state = {
-      startAnimation: false,
+      startAnimation: true,
       stopAnimation: false
     }
   }
 
   render() {
     return <View style={styles.container}>
-        <RNSiriWaveView type={0} width={800} height={750} startAnimation={this.state.startAnimation} stopAnimation={this.state.stopAnimation} />
+        <RNSiriWaveView type={0} width={800} height={750} startAnimation={true} stopAnimation={this.state.stopAnimation} />
 
         <TouchableOpacity style={[styles.button]} onPress={() => {
             this.setState({
