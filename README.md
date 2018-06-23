@@ -1,14 +1,4 @@
-
-
 <h1 align="center">
-
-<p align="center">
-  <img src="https://cdn.dribbble.com/users/341264/screenshots/2203511/wave.gif" width="600" height="300" />
-</p>
-
-<p align="center">
-  <img src="./assets/siriwave9.gif" width="600" height="300" />
-</p>
 
 
 <p align="center">
@@ -17,13 +7,24 @@
   <a href="https://github.com/prscX/react-native-siri-wave-view#License"><img src="https://img.shields.io/npm/l/react-native-siri-wave-view.svg?style=flat" /></a>
 </p>
 
-    React Native: Native Siri Wave View
-</h1>
+    ReactNative: Native Siri Wave View (Android/iOS)
 
+If this project has helped you out, please support us with a star 🌟
+</h1>
 
 This library is a React Native bridge around native libraries providing **Siri Wave** implementation
 
-## Getting started
+
+| **[stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView) & [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView)**             |
+| ----------------- |
+| <img src="https://cdn.dribbble.com/users/341264/screenshots/2203511/wave.gif" />                  |
+
+| **[prscX/PXSiriWave9](https://github.com/prscX/PXSiriWave9)**             |
+| ----------------- |
+| <img src="./assets/siriwave9.gif" />                  |
+
+
+## 📖 Getting started
 
 - `$ npm install react-native-siri-wave-view --save`
 
@@ -85,7 +86,7 @@ allprojects {
 `cd ./node_modules/react-native-siri-wave-view/ios/ && pod install`
 
 
-## Usage
+## 💻 Usage
 
 ```javascript
 
@@ -95,7 +96,7 @@ import RNSiriWaveView from 'react-native-siri-wave-view';
 
 ```
 
-## Props
+## 💡 Props
 
 
 - **Generic Props**
@@ -133,18 +134,36 @@ import RNSiriWaveView from 'react-native-siri-wave-view';
 | `colors`      | `array`     |    ["#2085fc", "#5efca9", "#fd4767"]     | Specify colors of siri wave 9 colors |
 
 
-## Credit
+## ✨ Credits
+
 - iOS: [stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView)
 - Android: [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView)
 - Siri Wave 9 Implementation by: [GreatPotter](https://github.com/GreatPotter)
 
-
-## Contribution
+## 🤔 How to contribute
+Have an idea? Found a bug? Please raise to [ISSUES](https://github.com/prscX/react-native-bottom-action-sheet/issues).
 Contributions are welcome and are greatly appreciated! Every little bit helps, and credit will always be given.
 
+## 💫 Where is this library used?
+If you are using this library in one of your projects, add it in this list below. ✨
 
-## License
-Copyright @ Pranav Raj Singh Chauhan
 
-RNSiriWaveView is provided under the Apache 2 License.
+## 📜 License
+This library is provided under the Apache 2 License.
 
+RNSiriWaveView @ [prscX](https://github.com/prscX)
+
+## 💖 Support my projects
+I open-source almost everything I can, and I try to reply everyone needing help using these projects. Obviously, this takes time. You can integrate and use these projects in your applications for free! You can even change the source code and redistribute (even resell it).
+
+However, if you get some profit from this or just want to encourage me to continue creating stuff, there are few ways you can do it:
+* Starring and sharing the projects you like 🚀
+* If you're feeling especially charitable, please follow [prscX](https://github.com/prscX) on GitHub.
+
+  <a href="https://www.buymeacoffee.com/prscX" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
+  Thanks! ❤️
+  <br/>
+  [prscX.github.io](https://prscx.github.io)
+  <br/>
+  </ Pranav >
