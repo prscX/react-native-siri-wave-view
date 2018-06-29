@@ -81,9 +81,7 @@ allprojects {
 
 #### iOS
 
-- Please run below command in order to install `cocoapods` required by the library:
-
-`cd ./node_modules/react-native-siri-wave-view/ios/ && pod install`
+  - After `react-native link react-native-siri-wave-view`, please verify `node_modules/react-native-siri-wave-view/ios/` contains `Pods` folder. If does not exist please execute `pod install` command on `node_modules/react-native-siri-wave-view/ios/`, if any error => try `pod repo update` then `pod install`
 
 
 ## 💻 Usage
@@ -149,7 +147,7 @@ If you are using this library in one of your projects, add it in this list below
 
 
 ## 📜 License
-This library is provided under the Apache 2 License.
+This library is provided under the Apache License.
 
 RNSiriWaveView @ [prscX](https://github.com/prscX)
 
