@@ -14,6 +14,7 @@ If this project has helped you out, please support us with a star 🌟
 
 This library is a React Native bridge around native libraries providing **Siri Wave** implementation
 
+> **Note:** iOS 9 Wave Form is only supported on iOS.
 
 | **[stefanceriu/SCSiriWaveformView](https://github.com/stefanceriu/SCSiriWaveformView) & [alexgomes09/SIRIWaveView](https://github.com/alexgomes09/SIRIWaveView)**             |
 | ----------------- |
