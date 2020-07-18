@@ -7,7 +7,9 @@
   <a href="https://github.com/prscX/react-native-siri-wave-view#License"><img src="https://img.shields.io/npm/l/react-native-siri-wave-view.svg?style=flat" /></a>
 </p>
 
-    ReactNative: Native Siri Wave View (Android/iOS)
+    ReactNative: Native Siri Wave View (Android/iOS): Deprecated
+
+Due to time constraint, this library is deprecated and not maintained anymore, You can still use this library.
 
 If this project has helped you out, please support us with a star 🌟
 </h1>
